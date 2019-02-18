@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Color-Thermostat-GUI-GraysonBeam", "Color-Thermostat-GUI-GraysonBeam\Color-Thermostat-GUI-GraysonBeam.csproj", "{B57E1CD5-C03C-4FBF-A580-B9DBD2407150}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B57E1CD5-C03C-4FBF-A580-B9DBD2407150}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B57E1CD5-C03C-4FBF-A580-B9DBD2407150}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B57E1CD5-C03C-4FBF-A580-B9DBD2407150}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B57E1CD5-C03C-4FBF-A580-B9DBD2407150}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8F796E7A-DA37-4DC0-B2CD-5D85EF2B525D}
+	EndGlobalSection
+EndGlobal

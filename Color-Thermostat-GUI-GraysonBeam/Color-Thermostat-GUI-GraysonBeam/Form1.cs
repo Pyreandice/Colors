@@ -23,6 +23,8 @@ namespace Color_Thermostat_GUI_GraysonBeam
         private const int NumSeventyFive = 75;
         private const int NumSeventySix = 76;
         private const int NumOneHundred = 100;
+        private const int NumTwoFiftyFive = 255;
+
         public ColorsForm()
         {
             this.InitializeComponent();
@@ -30,14 +32,7 @@ namespace Color_Thermostat_GUI_GraysonBeam
 
         public void CalculateTemperatureColor()
         {
-            int redValueCalculation;
-            int redValueOut;
-            int greenValueCalculation;
-            int greenValueOut;
-            int blueValueCalculation;
-            int blueValueOut;
-
-            int.TryParse(this.TemperatureTextBox.Text, out int temperature);
+            int.TryParse(this.TemperatureTextBox.Text, out var temperature);
             if (temperature < NumOne || temperature > NumOneHundred)
             {
                 this.TemperatureTextBox.BackColor = Color.IndianRed;
@@ -49,11 +44,15 @@ namespace Color_Thermostat_GUI_GraysonBeam
 
             if (temperature >= NumZero && temperature <= NumTwentyFive)
             {
-                // do this
+                var zeta = (temperature - NumOne) / (NumTwentyFive - NumOne);
+                var tote = NumTwoFiftyFive * zeta + NumTwoFiftyFive * (NumOne - zeta);
             }
             else if (temperature >= NumTwentySix && temperature <= NumFifty)
             {
-                // do this
+                var zeta = (temperature - NumTwentySix) / (NumFifty - NumTwentySix);
+                var tote = NumTwoFiftyFive * zeta + NumTwoFiftyFive * (NumOne - zeta);
+
+
             }
             else if (temperature >= NumFiftyOne && temperature <= NumSeventyFive)
             {
@@ -67,7 +66,7 @@ namespace Color_Thermostat_GUI_GraysonBeam
 
         public int ParseTemperatureTextBox(out int temperatureValue)
         {
-            int.TryParse(this.TemperatureTextBox.Text, out int temperature);
+            int.TryParse(this.TemperatureTextBox.Text, out var temperature);
             if (temperature < NumOne || temperature > NumOneHundred)
             {
                 this.TemperatureTextBox.BackColor = Color.IndianRed;
@@ -75,6 +74,7 @@ namespace Color_Thermostat_GUI_GraysonBeam
             else
             {
                 this.TemperatureTextBox.BackColor = Color.White;
+                this.CalculateTemperatureColor();
             }
             temperatureValue = temperature;
 
